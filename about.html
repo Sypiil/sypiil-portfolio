@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#09090d">
+    <meta name="description" content="Learn about Sypiil's approach to web design and development, from clear structure to responsive implementation.">
+    <title>About — Sypiil</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        .page-hero {
+            padding: 110px 0 80px;
+            border-bottom: 1px solid var(--border);
+            background:
+                radial-gradient(ellipse at 85% 10%, rgba(124, 86, 207, .13), transparent 45%),
+                var(--bg);
+        }
+
+        .page-hero h1 {
+            max-width: 900px;
+            font-size: clamp(43px, 6vw, 72px);
+            line-height: 1.1;
+            letter-spacing: -3px;
+        }
+
+        .page-hero p {
+            max-width: 650px;
+            margin-top: 25px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.95;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 65px;
+            align-items: start;
+        }
+
+        .about-copy h2 {
+            font-size: clamp(29px, 4vw, 42px);
+            line-height: 1.25;
+            letter-spacing: -1.5px;
+        }
+
+        .about-copy p {
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .about-panel {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: linear-gradient(145deg, #14131d, #0d0d13);
+        }
+
+        .about-panel h3 {
+            font-size: 17px;
+        }
+
+        .principle {
+            display: grid;
+            grid-template-columns: 35px 1fr;
+            gap: 15px;
+            padding: 21px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .principle:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .principle-number {
+            color: var(--purple-light);
+            font-size: 11px;
+            font-weight: 750;
+        }
+
+        .principle h4 {
+            font-size: 13px;
+        }
+
+        .principle p {
+            margin-top: 7px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 13px;
+        }
+
+        .skill-item {
+            min-height: 115px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 19px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--surface);
+        }
+
+        .skill-symbol {
+            color: var(--purple-light);
+            font-size: 21px;
+        }
+
+        .skill-item h3 {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .honesty-note {
+            margin-top: 25px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        @media (max-width: 760px) {
+            .page-hero {
+                padding: 80px 0 60px;
+            }
+
+            .page-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 380px) {
+            .about-panel {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="site-shell">
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="brand">sypiil<span class="brand-dot">.</span></a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation"
+                    aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="work.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link active" aria-current="page">About</a>
+                <a href="contact.html" class="nav-contact">Let's Talk <span>↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">A LITTLE ABOUT ME</span>
+                <h1>Good websites start with <span class="gradient-text">clear thinking.</span></h1>
+                <p>
+                    I'm Sypiil, a web designer and developer focused on creating
+                    clean, modern websites that communicate clearly and work
+                    across different screen sizes.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container about-grid">
+                <div class="about-copy">
+                    <span class="eyebrow">MY APPROACH</span>
+                    <h2>Design with intention.<br>Build with purpose.</h2>
+
+                    <p>
+                        I believe a website should do more than look attractive.
+                        It should help visitors understand a business, find
+                        useful information and know what to do next.
+                    </p>
+
+                    <p>
+                        My approach combines considered layouts, readable
+                        typography, consistent visual details and responsive
+                        front-end development. Every project starts with
+                        understanding the purpose of the website and the people
+                        it needs to serve.
+                    </p>
+
+                    <p>
+                        Through my portfolio projects, I explore different
+                        design directions and build practical experience with
+                        HTML, CSS and JavaScript. I'm committed to improving
+                        my process and delivering work that matches the
+                        requirements agreed upon for each project.
+                    </p>
+                </div>
+
+                <aside class="about-panel">
+                    <h3>What guides my work</h3>
+
+                    <div class="principle">
+                        <span class="principle-number">01</span>
+                        <div>
+                            <h4>Clarity first</h4>
+                            <p>
+                                Make the important information easy to find
+                                and understand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="principle">
+                        <span class="principle-number">02</span>
+                        <div>
+                            <h4>Responsive by design</h4>
+                            <p>
+                                Build layouts that adapt to phones, tablets
+                                and desktop screens.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="principle">
+                        <span class="principle-number">03</span>
+                        <div>
+                            <h4>Purposeful details</h4>
+                            <p>
+                                Use colour, spacing and typography to support
+                                the experience rather than distract from it.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="principle">
+                        <span class="principle-number">04</span>
+                        <div>
+                            <h4>Honest communication</h4>
+                            <p>
+                                Agree on the scope, communicate clearly and
+                                be transparent about functionality.
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="featured-work">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">TOOLS & CAPABILITIES</span>
+                        <h2>The foundations<br>behind my work.</h2>
+                    </div>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-item">
+                        <span class="skill-symbol">⌘</span>
+                        <h3>HTML</h3>
+                    </article>
+
+                    <article class="skill-item">
+                        <span class="skill-symbol">✳</span>
+                        <h3>CSS & Layouts</h3>
+                    </article>
+
+                    <article class="skill-item">
+                        <span class="skill-symbol">JS</span>
+                        <h3>JavaScript</h3>
+                    </article>
+
+                    <article class="skill-item">
+                        <span class="skill-symbol">◫</span>
+                        <h3>Responsive Design</h3>
+                    </article>
+                </div>
+
+                <p class="honesty-note">
+                    My portfolio demonstrates self-initiated projects.
+                    The exact tools, features and integrations used for a
+                    client project will depend on its requirements.
+                </p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-glow"></div>
+                    <span class="eyebrow">LET'S CONNECT</span>
+                    <h2>Have something<br><span class="gradient-text">in mind?</span></h2>
+                    <p>
+                        If you're planning a new website or considering a
+                        redesign, let's discuss your goals and requirements.
+                    </p>
+                    <a href="contact.html" class="button button-primary">
+                        Get in Touch <span>↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="brand">sypiil<span class="brand-dot">.</span></a>
+            <p>Web design & development · India</p>
+            <a class="footer-email" href="mailto:sypiilmpaul009@gmail.com">
+                sypiilmpaul009@gmail.com
+            </a>
+            <span class="copyright">© <span id="current-year"></span> Sypiil</span>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

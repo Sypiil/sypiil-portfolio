@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#09090d">
+    <meta name="description" content="Explore website design concepts created by Sypiil, including a luxury barbershop website and a modern creative studio website.">
+    <title>Selected Work — Sypiil</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        .page-hero {
+            padding: 110px 0 75px;
+            border-bottom: 1px solid var(--border);
+            background:
+                radial-gradient(ellipse at 85% 10%, rgba(124, 86, 207, .13), transparent 45%),
+                var(--bg);
+        }
+
+        .page-hero h1 {
+            max-width: 850px;
+            font-size: clamp(43px, 6vw, 72px);
+            line-height: 1.1;
+            letter-spacing: -3px;
+        }
+
+        .page-hero p {
+            max-width: 610px;
+            margin-top: 24px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .work-list {
+            display: grid;
+            gap: 65px;
+        }
+
+        .work-item {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .work-item:nth-child(even) {
+            grid-template-columns: .9fr 1.1fr;
+        }
+
+        .work-item:nth-child(even) .work-visual {
+            order: 2;
+        }
+
+        .work-visual {
+            min-width: 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .work-visual a {
+            display: block;
+        }
+
+        .work-visual .project-preview {
+            min-height: 360px;
+            border: 0;
+            border-radius: 0;
+        }
+
+        .work-content .eyebrow {
+            margin-bottom: 15px;
+        }
+
+        .work-content h2 {
+            font-size: clamp(28px, 3vw, 39px);
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        .work-content > p {
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.95;
+        }
+
+        .work-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 23px;
+        }
+
+        .work-tags span {
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: #d1cbdc;
+            font-size: 10px;
+        }
+
+        .work-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .work-note {
+            margin-top: 55px;
+            padding: 22px 25px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .work-note strong {
+            color: var(--text);
+        }
+
+        @media (max-width: 760px) {
+            .page-hero {
+                padding: 80px 0 60px;
+            }
+
+            .page-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .work-list {
+                gap: 55px;
+            }
+
+            .work-item,
+            .work-item:nth-child(even) {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .work-item:nth-child(even) .work-visual {
+                order: 0;
+            }
+
+            .work-visual .project-preview {
+                min-height: 290px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="site-shell">
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="brand">sypiil<span class="brand-dot">.</span></a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation"
+                    aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="work.html" class="nav-link active" aria-current="page">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-contact">Let's Talk <span>↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">SELECTED PROJECTS</span>
+                <h1>Ideas brought to life through <span class="gradient-text">web design.</span></h1>
+                <p>
+                    A selection of website concepts built to explore different
+                    visual styles, page structures and digital experiences.
+                    Each project has its own character and design direction.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="work-list">
+
+                    <article class="work-item">
+                        <div class="work-visual">
+                            <a href="https://sypiil.github.io/barber--website/"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="Open The Gent's Club website">
+                                <div class="project-preview barber-preview">
+                                    <div class="barber-frame">
+                                        <span class="preview-overline">PREMIUM GROOMING</span>
+                                        <div class="barber-title">THE<br>GENT'S<br>CLUB.</div>
+                                        <span class="barber-caption">STYLE · CRAFT · CHARACTER</span>
+                                    </div>
+                                    <span class="preview-open">↗</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="work-content">
+                            <span class="eyebrow">PROJECT 01 · BUSINESS WEBSITE CONCEPT</span>
+                            <h2>The Gent's Club</h2>
+                            <p>
+                                A luxury barbershop website concept built around
+                                a refined black-and-gold palette, strong typography
+                                and a premium grooming aesthetic.
+                            </p>
+                            <div class="work-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Responsive Layout</span>
+                                <span>Luxury Design</span>
+                            </div>
+                            <div class="work-actions">
+                                <a class="button button-primary"
+                                   href="https://sypiil.github.io/barber--website/"
+                                   target="_blank" rel="noopener noreferrer">
+                                    View Live Website <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-item">
+                        <div class="work-visual">
+                            <a href="https://sypiil.github.io/nova-studio-website/"
+                               target="_blank" rel="noopener noreferrer"
+                               aria-label="Open Nova Studio website">
+                                <div class="project-preview nova-preview">
+                                    <div class="nova-frame">
+                                        <span class="nova-brand">NOVA® STUDIO</span>
+                                        <div class="nova-title">Make<br>it <span>matter.</span></div>
+                                        <span class="nova-caption">DESIGN · DIGITAL · DIRECTION</span>
+                                    </div>
+                                    <span class="preview-open">↗</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="work-content">
+                            <span class="eyebrow">PROJECT 02 · CREATIVE STUDIO CONCEPT</span>
+                            <h2>Nova Studio</h2>
+                            <p>
+                                A modern multi-page creative studio concept
+                                exploring bold typography, dark surfaces,
+                                vibrant accents and consistent navigation
+                                across several pages.
+                            </p>
+                            <div class="work-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Multi-Page Design</span>
+                            </div>
+                            <div class="work-actions">
+                                <a class="button button-primary"
+                                   href="https://sypiil.github.io/nova-studio-website/"
+                                   target="_blank" rel="noopener noreferrer">
+                                    View Live Website <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="work-note">
+                    <strong>About these projects:</strong>
+                    These are self-initiated portfolio concepts, not commissioned
+                    client projects. They demonstrate design and implementation
+                    work rather than verified business results.
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-glow"></div>
+                    <span class="eyebrow">YOUR PROJECT COULD BE NEXT</span>
+                    <h2>Have an idea?<br><span class="gradient-text">Let's talk.</span></h2>
+                    <p>
+                        Share what you have in mind, and we can discuss a
+                        website that suits your business and its needs.
+                    </p>
+                    <a href="contact.html" class="button button-primary">
+                        Start a Conversation <span>↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="brand">sypiil<span class="brand-dot">.</span></a>
+            <p>Web design & development · India</p>
+            <a class="footer-email" href="mailto:sypiilmpaul009@gmail.com">
+                sypiilmpaul009@gmail.com
+            </a>
+            <span class="copyright">© <span id="current-year"></span> Sypiil</span>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
